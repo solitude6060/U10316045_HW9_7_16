@@ -1,4 +1,37 @@
 
 public class TwoSort {
-
+	
+	public static void sort(int m[][]){
+		for(int i = 0; i < m.length; i++){
+			
+			int current = m[i][0];
+			int index = i;
+			
+			for(int j = i;j < m.length;j++){
+				if(current < m[j][0]||(current == m[j][0] && m[index][1] > m[j][1])){
+					current = m[j][0];
+					index = j;
+				}
+			}
+			if(index != i){
+				int temp1 = m[i][0];
+				int temp2 = m[i][1];
+				
+				m[i][0] = m[index][0];
+				m[i][1] = m[index][1];
+				
+				m[index][0] = temp1;
+				m[index][1] = temp2;
+			}
+			
+		}
+	}
+	
+	public static void print(int m[][]){
+		
+		for (int i = 0; i < m.length; i++) {
+			System.out.println(m[i][0] + ", " + m[i][1]);
+		}
+		
+	}
 }
