@@ -18,7 +18,7 @@ public class TwoSort {
 				}
 			}
 			if(index != i){
-				int temp1 = m[i][0];
+			/*	int temp1 = m[i][0];
 				int temp2 = m[i][1];
 				
 				m[i][0] = m[index][0];
@@ -27,7 +27,13 @@ public class TwoSort {
 				m[index][0] = temp1;
 				m[index][1] = temp2;
 			
-			
+			*/
+				int temp0 = m[index][0];
+		        int temp1 = m[index][1];
+		        m[index][0] = m[i][0];
+		        m[index][1] = m[i][1];
+		        m[i][0] = temp0;
+		        m[i][1] = temp1;
 			}
 			
 		}

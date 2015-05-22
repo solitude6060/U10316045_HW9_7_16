@@ -1,10 +1,6 @@
 
 public class TwoSort {
 	
-	public  TwoSort(){
-		
-	}
-	
 	public static void sort(int m[][]){
 		for(int i = 0; i < m.length; i++){
 			
@@ -12,7 +8,7 @@ public class TwoSort {
 			int index = i;
 			
 			for(int j = i;j < m.length;j++){
-				if(current > m[j][0]||(current == m[j][0] && m[index][1] > m[j][1])){
+				if(current < m[j][0]||(current == m[j][0] && m[index][1] > m[j][1])){
 					current = m[j][0];
 					index = j;
 				}
@@ -26,8 +22,6 @@ public class TwoSort {
 				
 				m[index][0] = temp1;
 				m[index][1] = temp2;
-			
-			
 			}
 			
 		}
