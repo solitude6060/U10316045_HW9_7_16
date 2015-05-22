@@ -1,29 +1,22 @@
-//U10316045
-//homework 9
-//sort two dimensional array
-//2015/5/22
 
 public class TwoSort {
 	
-	//default constructor
 	public  TwoSort(){
 		
 	}
 	
-	//sort method
 	public static void sort(int m[][]){
 		for(int i = 0; i < m.length; i++){
 			
 			int current = m[i][0];
 			int index = i;
-			//find minimum
+			
 			for(int j = i;j < m.length;j++){
 				if(current > m[j][0]||(current == m[j][0] && m[index][1] > m[j][1])){
 					current = m[j][0];
 					index = j;
 				}
 			}
-			//switch
 			if(index != i){
 				int temp1 = m[i][0];
 				int temp2 = m[i][1];
@@ -40,7 +33,6 @@ public class TwoSort {
 		}
 	}
 	
-	//print method
 	public static void print(int m[][]){
 		
 		for (int i = 0; i < m.length; i++) {
